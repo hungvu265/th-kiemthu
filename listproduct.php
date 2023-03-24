@@ -17,12 +17,12 @@
 	<button class="btn btn-primary" id="submit">Tìm kiếm</button>
 
 	<?php
+    require 'connectdb.php';
+    $con = (new DB())->getConnect();
 	session_start();
 	if(!$_SESSION['login']){
 		header('Location: login.php');
 	}
-	
-	$con = mysqli_connect("localhost", "root", "", "laravel");
 
 	$sql = mysqli_query($con, "SELECT * FROM sanpham");
 	?>

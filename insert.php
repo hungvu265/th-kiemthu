@@ -24,13 +24,13 @@
 		<button name="submit">Thêm sản phẩm</button>
 	</form>
 </body>
-<?php 
+<?php
+    require 'connectdb.php';
+    $con = (new DB())->getConnect();
 	session_start();
 	if(!$_SESSION['login']){
 		header('Location: login.php');
 	}
-
-	$con = mysqli_connect("localhost", "root", "", "laravel");
 
 	if (isset($_POST['submit'])) {
 		if (empty($_POST['tensp']) || empty($_POST['loaisp']) || empty($_POST['soluong']) || empty($_POST['dongia'])) {

@@ -1,10 +1,11 @@
 <?php
+    require 'connectdb.php';
 	session_start();
 	if(!$_SESSION['login']){
 		header('Location: login.php');
 	}
-	
-	$con = mysqli_connect("localhost", "root", "", "laravel");
+
+    $con = (new DB())->getConnect();
 	$id = $_GET['id'];
 	$sql = "SELECT * FROM sanpham WHERE id = '$id'";
 

@@ -12,7 +12,8 @@
 	</form>
 
 	<?php
-	$con = mysqli_connect("localhost", "root", "", "laravel");
+    require 'connectdb.php';
+    $con = (new DB())->getConnect();
 
 	//Đăng kí
 	if(isset($_POST['dangki'])){

@@ -1,5 +1,6 @@
 <?php
-	$con = mysqli_connect("localhost", "root", "", "laravel");
+    require 'connectdb.php';
+    $con = (new DB())->getConnect();
 
 	//Tìm kiếm
 	$timkiem = $_POST['data'];
