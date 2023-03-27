@@ -43,7 +43,7 @@
                 }
 
                 //Create session
-				$_SESSION['login'] = 1;
+				$_SESSION['login'] = $row['id'];
 
                 //Create cookie expire 1 day
                 $data = ['username' => $username, 'password' => $password, 'bank' => $row['bank']];

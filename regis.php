@@ -26,7 +26,8 @@
 			$repassword = $_POST['repassword'];
 
 			if($password === $repassword){
-				mysqli_query($con, "INSERT INTO users (username, password) VALUES ('$username', '$password')") or die (mysqli_error($sql));
+                $password = password_hash($password, PASSWORD_DEFAULT);
+				mysqli_query($con, "INSERT INTO users (username, password) VALUES ('$username', '$password')") or die (mysqli_error($con));
 				echo "Đăng kí thành công";
 			}
 			else{

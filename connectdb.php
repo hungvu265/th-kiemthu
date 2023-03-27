@@ -5,7 +5,7 @@
 
         public function connectDB()
         {
-            return mysqli_connect("localhost", "root", "password", "laravel");
+            return mysqli_connect("localhost", "root", "", "laravel");
         }
 
         public function getConnect()

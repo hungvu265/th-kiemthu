@@ -44,7 +44,7 @@
 					<td><?= $value['loaisp']; ?></td>
 					<td><?= $value['soluong']; ?></td>
 					<td><?= $value['dongia']; ?></td>
-					<td><a href="change.php?id=<?= $value['id']; ?>" class="btn btn-primary">Thay đổi</a>
+					<td><a href="comment.php?id=<?= $value['id']; ?>" class="btn btn-primary">Bình luận</a>
 					<td><a href="delete.php?id=<?= $value['id']; ?>" class="btn btn-danger">Xóa</a>
 				</tr>
 			<?php endforeach; ?>

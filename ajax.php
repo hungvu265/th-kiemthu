@@ -6,6 +6,8 @@
 	$timkiem = $_POST['data'];
 
 	$sql = "SELECT * FROM sanpham WHERE tensp LIKE '%$timkiem%'";
+//    var_dump($sql);
+//    die();
 
 	$query = mysqli_query($con, $sql) or die (mysqli_error($con)); 
 ?>
